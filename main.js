@@ -41,3 +41,11 @@ function copyFunction() {
   passwordBox.select();
   navigator.clipboard.writeText(passwordBox.value);
 }
+
+generateBtn.addEventListener("mouseover", (e) => {
+  let x = e.pageX - generateBtn.offsetLeft;
+  let y = e.pageY - generateBtn.offsetTop;
+
+  generateBtn.style.setProperty("--x", x + "px");
+  generateBtn.style.setProperty("--y", y + "px");
+});

@@ -18,8 +18,8 @@
   justify-content: space-between;
 }
 .container h1 span {
-  color: green;
-  border-bottom: 1px solid green;
+  color: #008000;
+  border-bottom: 3px solid green;
 }
 
 .container input {
@@ -53,4 +53,34 @@ h2 {
   border-radius: 35px;
   padding: 12px 15px;
   cursor: pointer;
+}
+
+#generateBtn {
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+#generateBtn::after {
+  position: absolute;
+  content: "";
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%, -50%);
+  height: 0;
+  width: 0;
+  background-color: #008000;
+  border-radius: 50%;
+  transition: 0.8s ease, left 0s, top 0s;
+}
+
+#generateBtn:hover::after {
+  height: 800px;
+  width: 800px;
+}
+
+#generateBtn span {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0);
 }
